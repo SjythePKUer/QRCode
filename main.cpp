@@ -9,7 +9,7 @@ using namespace cv;
 using namespace std;
 int main() 
 {
-	const char* str = "C:\\Users\\sunjiayu\\Desktop\\qrcode.jpg";
+	const char* str = "qrcode.jpg";
 	Mat raw = imread(str);
 	Mat image = raw;
 	if (raw.empty())
@@ -56,7 +56,7 @@ int main()
 		drawContours(raw, contours, index[i], Scalar(0, 0, 255), 2, 8);
 	}
 	imshow("contours", raw);
-	imwrite("./result.jpg", raw);
+	imwrite("result.jpg", raw);
 	waitKey(0);
 	return 0;
 }
