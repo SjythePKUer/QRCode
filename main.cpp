@@ -17,6 +17,9 @@ int main()
 		cout << "Could not read image file" << endl;
 		return -1;
 	}
+	//************************************************************
+	//1. Get the three position patterns
+	//************************************************************
 	cvtColor(raw, image, CV_BGR2GRAY);
 	threshold(image, image, 100, 255, THRESH_BINARY);
 	medianBlur(image, image, 3);
